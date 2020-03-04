@@ -1,0 +1,135 @@
+.sliders-wrapper {
+  height: 100vh;
+  margin: 0;
+}
+
+.slider,
+.slider .slider-imgs {
+  width: 100%;
+  height: calc(100% - 80px);
+  position: relative;
+}
+
+.slider {
+  height: 100%;
+
+}
+
+.slider .slider-imgs {
+  display: flex;
+  overflow: hidden;
+}
+
+.slider .slider-img {
+  min-width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  left: 100%;
+  animation: .6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s left;
+  animation-fill-mode: forwards;
+  background-size: cover !important;
+  background-position: 50% !important;
+}
+
+.slider .slider-img:nth-of-type(1) {
+  background: url("https://wallpapercave.com/wp/wp5751166.jpg");
+}
+
+.slider .slider-img:nth-of-type(2) {
+  background: url("https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg");
+}
+
+.slider .slider-img:nth-of-type(3) {
+  background: url("https://wallpapercave.com/wp/9F6GsSn.jpg");
+}
+
+
+.slider .slider-img span {
+  color: black;
+  font-size: 5rem;
+  text-align: center;
+  width: 300px;
+  margin-top: 90%;
+}
+
+.buttons-bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 80px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  background: gray;
+  border-right: 1px solid white;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.button:last-child {
+  border-right: none;
+}
+
+.active-button {
+  background: #3f3f3f;
+  cursor: default;
+}
+
+.button-inner {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+@keyframes leftNext {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes leftCurr {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes rightNext {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes rightCurr {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 100%;
+  }
+}
