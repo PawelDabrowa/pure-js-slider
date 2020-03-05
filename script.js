@@ -17,6 +17,7 @@
       const button = document.createElement("div");
       button.classList.add("button");
       buttons.appendChild(button);
+      button.textContent = 'pawel';
       button.addEventListener("click", buttonClick.bind(null, i), false);
     }
 
